@@ -25,6 +25,7 @@
 
 body {
     background-color: var(--main-bg);
+    color: var(--off-white);
 }
 
 a {
