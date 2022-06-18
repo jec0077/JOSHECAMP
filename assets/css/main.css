@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@500&family=Poppins&family=Roboto+Slab&family=Satisfy&family=Source+Code+Pro:wght@500&family=Spline+Sans+Mono&display=swap');
+
+:root {
+    --matte-black: #28282b;
+    --off-white: #faf9f6;
+    --grey: #919191;
+    
+    --maya-blue: #5bccf6;
+    --cobalt: #024bad;
+    --dandelion: #fcde67;
+    --dark-navy: #242943;
+
+    --main-bg: var(--dark-navy);
+    --secondary-bg: ;
+    --secondary-color: var(--maya-blue);
+    --primary-text: var(--off-white);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-bg);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    height: 4.7rem;
+    background-color: var(--main-bg);
+    line-height: 4.7rem;
+    padding: 0rem 5rem;
+}
+
+nav .logo {
+    float: left;
+    cursor: pointer;
+    width: 3.3rem;
+    height: auto;
+    padding-top: 0.315rem;
+    margin: auto;
+}
+
+nav .logo p {
+    font-size: 2.125rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: var(--primary-text);
+    text-transform: uppercase;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-text);
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    padding: 0rem 1.25rem;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+    color: var(--secondary-color);
+}
+
+nav ul .is-active {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.checkbtn {
+    color: var(--primary-text); 
+    font-size: 1.6rem;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media screen and (max-width: 990px) {
+    nav {
+        padding: 0rem 3.125rem;
+    }
+    
+    .checkbtn {
+        display: block;
+    }
+
+    nav .logo p {
+        font-size: 1.875rem;
+    }
+
+    nav ul {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--main-bg);
+        position: fixed;
+        top: 4.7rem;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s ease 0.1s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 3.75rem 0rem;
+        line-height: 1.25rem;
+    }
+
+    #check:checked ~ ul {
+        left: 0rem;
+    }
+}
+
+.content {
+    flex: 1 1 0;
+    padding: 5rem;
+}
+
+.fixed {
+    float: left;
+}
